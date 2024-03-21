@@ -1,3 +1,3 @@
 #!/bin/bash
-alias gcc=' ./convential-commit.sh'
-alias gpr=' ./create-pr.sh'
+alias gcc=' /Users/davidfortuna/Documents/scripts/convential-commit.sh'
+alias gpr=' /Users/davidfortuna/Documents/scripts/create-pr.sh'
