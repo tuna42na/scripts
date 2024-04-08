@@ -3,13 +3,13 @@
 set -e 
 # VARIABLES
 echo "Commit type:"
-ACTION=$(gum choose 'feat' 'fix' 'docs' 'style' 'refactor' 'perf' 'test' 'build' 'ci' 'chore' 'revert')
+ACTION=$(gum filter 'build' 'chore' 'ci' 'docs' 'feat' 'fix' 'perf' 'refactor' 'revert' 'style' 'test')
 tput cuu1
 tput el
 echo "Commit type: $ACTION ✅"
-PR=$(gum input --placeholder 'Enter the PR number')
+PR=$(gum input --prompt "PR Number: " --placeholder 'ex. CL-*** || SB-***')
 echo "PR: $PR ✅"
-MESSAGE=$(gum input --placeholder 'Enter the commit message')
+MESSAGE=$(gum input --prompt "Commit message: " --placeholder 'added a commit message...')
 echo "Commit message: $MESSAGE ✅"
 
 echo 'Breaking change?:'
