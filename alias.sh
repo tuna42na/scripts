@@ -1,3 +1,6 @@
 #!/bin/bash
-alias gcc=' /Users/davidfortuna/Documents/scripts/convential-commit.sh'
-alias gpr=' /Users/davidfortuna/Documents/scripts/create-pr.sh'
+SCRIPT_DIR=$(pwd)
+alias gcc='$SCRIPT_DIR/convential-commit.sh'
+alias gpr='$SCRIPT_DIR/create-pr.sh'
+alias smk='$SCRIPT_DIR/smokes.sh'
+alias gst='$SCRIPT_DIR/stash-message.sh'
