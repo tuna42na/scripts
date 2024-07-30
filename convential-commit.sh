@@ -2,8 +2,7 @@
 # This script is used to create a conventional commit message with gum
 set -e 
 # VARIABLES
-echo "Commit type:"
-ACTION=$(gum filter 'build' 'chore' 'ci' 'docs' 'feat' 'fix' 'perf' 'refactor' 'revert' 'style' 'test')
+ACTION=$(gum filter --placeholder "Commit type:" 'build' 'chore' 'ci' 'docs' 'feat' 'fix' 'perf' 'refactor' 'revert' 'style' 'test')
 tput cuu1
 tput el
 echo "Commit type: $ACTION ✅"
