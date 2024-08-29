@@ -34,7 +34,7 @@ function create_smoke_user() {
   echo "Smoke user created ✅"
 }
 
-# VARIABLES
+# Actual script
 NAMESPACE=$(gum input --prompt "Environment:" --placeholder 'ex. api-pr*** ')
 check_aws_login
 TYPE=$(gum filter --placeholder "Type: " 'investing' 'lending')
