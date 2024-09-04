@@ -9,7 +9,4 @@ brew install gum
 ```
 
 ### Aliasing
-I like to use aliases for all of these. I have included the an alias file in this batch. Just throw the code into your `.zshrc` file and it will load you own custom aliases. Neat!
-```
-source RELATIVE_ALIAS_PATH
-```
+You get the basic aliases that I've determined, but feel free to customize. If you run `./setup.sh` it will add the path to your `.zshrc`.

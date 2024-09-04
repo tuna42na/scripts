@@ -5,8 +5,7 @@ if [[ $GUM == 0 ]]; then
     echo "Gum is already installed ✅"
 else
     echo "Gum is not installed"
-    echo "Installing gum..."
-    npm install -g gum
+    echo "run brew install gum to install gum"
 fi
 
 # Add this directory path to the zshrc file

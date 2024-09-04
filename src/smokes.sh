@@ -35,7 +35,7 @@ function create_smoke_user() {
 }
 
 # Actual script
-NAMESPACE=$(gum input --prompt "Environment:" --placeholder 'ex. api-pr*** ')
+NAMESPACE=$(gum input --prompt "Environment:" --placeholder 'ex. api-pr***  || edge')
 check_aws_login
 TYPE=$(gum filter --placeholder "Type: " 'investing' 'lending')
 tput cuu1
