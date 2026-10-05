@@ -46,4 +46,5 @@ echo "Smoke Type: $TYPE ✅"
 echo "Email: $EMAIL ✅"
 
 # CONFIRMATION
+
 CONFIRM=$(gum confirm && create_smoke_user || echo "Smoke user creation cancelled ❌ 👋🏼")
