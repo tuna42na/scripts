@@ -15,7 +15,16 @@ func getBranchInfo() (defaultPR string) {
 		return ""
 	}
 	branch := strings.TrimSpace(string(out))
-	parts := strings.SplitN(branch, "-", 3)
+	parts := []string{}
+	// Sometimes branch names are prefixed with a remote or category, e.g., "feature/ABC-123-description"
+	if strings.Contains(branch, "/") {
+		branch = strings.SplitN(branch, "/", 2)[0]
+		parts = strings.SplitN(branch, "-", 3)
+	} else if strings.Contains(branch, "-") {
+		parts = strings.SplitN(branch, "-", 3)
+	} else {
+		parts = []string{"2na"}
+	}
 	if len(parts) >= 2 {
 		return parts[0] + "-" + parts[1]
 	}
